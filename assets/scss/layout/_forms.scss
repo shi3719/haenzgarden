@@ -1,0 +1,405 @@
+section{
+    width: calc(100% - 48px);
+    margin: 0 auto;
+
+    @include tablet{
+        width: 720px;
+    }
+}
+
+.main_section{
+    width: 100%;
+    height: 100vh;
+    @include flex_center;
+}
+
+.im{
+    font-size: 40px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main_ul{
+    margin-bottom: 80px;
+    li{
+        text-align: center;
+        font-size: 80px;
+        font-weight: 600;
+    }
+}
+
+.text_wrap{
+    @include flex_center;
+    p{
+        width: fit-content;
+        width: 69px;
+        height: 96px;
+    }
+}
+.noung,.bu{
+    position: relative;
+}
+
+.noung::after{
+    content: "농";
+    display: block;
+    width: 96px;
+    height: 96px;
+    @include fix_center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/assets/images/1.png);
+    color: transparent;
+    animation-name: noung;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    @keyframes noung {
+        from{
+            color: transparent;
+            background-image: url(/assets/images/1.png);
+        }
+        9%{
+            color: transparent;
+            background-image: url(/assets/images/1.png);
+        }
+        10%{
+            color: black;
+            background-image: none;
+        }
+        19%{
+            color: black;
+            background-image: none;
+        }
+        20%{
+            color: transparent;
+            background-image: url(/assets/images/2.png);
+        }
+        29%{
+            color: transparent;
+            background-image: url(/assets/images/2.png);
+        }
+        30%{
+            color: black;
+            background-image: none;
+        }
+        39%{
+            color: black;
+            background-image: none;
+        }
+        40%{
+            color: transparent;
+            background-image: url(/assets/images/3.png);
+        }
+        49%{
+            color: transparent;
+            background-image: url(/assets/images/3.png);
+        }
+        50%{
+            color: black;
+            background-image: none;
+        }
+        59%{
+            color: black;
+            background-image: none;
+        }
+        60%{
+            color: transparent;
+            background-image: url(/assets/images/4.png);
+        }
+        69%{
+            color: transparent;
+            background-image: url(/assets/images/4.png);
+        }
+        70%{
+            color: black;
+            background-image: none;
+        }
+        79%{
+            color: black;
+            background-image: none;
+        }
+        80%{
+            color: transparent;
+            background-image: url(/assets/images/5.png);
+        }
+        89%{
+            color: transparent;
+            background-image: url(/assets/images/5.png);
+        }
+        90%{
+            color: black;
+            background-image: none;
+        }
+        100%{
+            color: black;
+            background-image: none;
+        }
+    }
+}
+
+.bu::after{
+    content: "부";
+    display: block;
+    width: 96px;
+    height: 96px;
+    @include fix_center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+
+    animation-name: bu;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+
+    @keyframes bu {
+        from{
+            color: transparent;
+            background-image: url(/assets/images/6.png);
+        }
+        9%{
+            color: transparent;
+            background-image: url(/assets/images/6.png);
+        }
+        10%{
+            color: black;
+            background-image: none;
+        }
+        19%{
+            color: black;
+            background-image: none;
+        }
+        20%{
+            color: transparent;
+            background-image: url(/assets/images/7.png);
+        }
+        29%{
+            color: transparent;
+            background-image: url(/assets/images/7.png);
+        }
+        30%{
+            color: black;
+            background-image: none;
+        }
+        39%{
+            color: black;
+            background-image: none;
+        }
+        40%{
+            color: transparent;
+            background-image: url(/assets/images/8.png);
+        }
+        49%{
+            color: transparent;
+            background-image: url(/assets/images/8.png);
+        }
+        50%{
+            color: black;
+            background-image: none;
+        }
+        59%{
+            color: black;
+            background-image: none;
+        }
+        60%{
+            color: transparent;
+            background-image: url(/assets/images/9.png);
+        }
+        69%{
+            color: transparent;
+            background-image: url(/assets/images/9.png);
+        }
+        70%{
+            color: black;
+            background-image: none;
+        }
+        79%{
+            color: black;
+            background-image: none;
+        }
+        80%{
+            color: transparent;
+            background-image: url(/assets/images/10.png);
+        }
+        89%{
+            color: transparent;
+            background-image: url(/assets/images/10.png);
+        }
+        90%{
+            color: black;
+            background-image: none;
+        }
+        99%{
+            color: black;
+            background-image: none;
+        }
+        100%{
+            color: transparent;
+            background-image: url(/assets/images/6.png);
+        }
+    }
+}
+
+.header{
+    padding: 15px 0;
+}
+
+.list_ul{
+    @include flex_between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    >li{
+        width: calc(50% - 10px);
+        margin-bottom: 30px;
+
+        .img_cover{
+            margin-bottom: 20px;
+            position: relative;
+
+            .bg{
+                width: 100%;
+                padding-bottom: 100%;
+                @include bgCover;
+            }
+
+            .message{
+                width: 132px;
+                padding: 3px 18px;
+                color: $white;
+                @include transition02;
+                opacity: 0;
+
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%,-50%) rotate(11deg);
+
+                font-weight: 600;
+                letter-spacing: 4px;
+                font-size: 16px;
+                text-align: center;
+
+                @include tablet{
+                    width: 200px;
+                    font-size: 23px;
+                    padding: 7px 32px;
+                }
+
+                &.edible{
+                    background-color: $green;
+                }
+
+                &.notyet{
+                    background-color: $black;
+                }
+
+                &.umm{
+                    background-color: #FF9C09;
+                }
+            }
+        }
+
+        .name{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-align: center;
+            @include transition02;
+            opacity: 0;
+        }
+
+        .text{
+            font-size: 12px;
+            font-weight: 300;
+            text-align: center;
+            @include transition02;
+            opacity: 0;
+        }
+
+        &.on{
+            .message,.name,.text{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.button{
+    width: 100%;
+    padding: 16px 40px;
+    margin: 30px 0;
+    background-color: $green;
+    color: $white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 100px;
+    text-align: center;
+
+    &.click{
+        width: fit-content;
+        background-color: rgba($color: $white, $alpha: 0.5);
+        color: rgba($color: $black, $alpha: 0.8);
+        @include fix_center;
+        position: fixed;
+    }
+}
+
+.blind{
+    @include flex_center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+
+    @include fix_center;
+    position: fixed;
+    z-index: 10;
+
+    &.remove{
+        display: none;
+    }
+
+    li{
+        width: calc(100% / 9);
+        padding-bottom: calc(100% / 9);
+        background-color: white;
+
+        animation-name: opacity;
+        animation-duration: .4s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+        &:nth-child(3n){
+            animation-delay: .6s;
+        }
+
+        &:nth-child(5n){
+            animation-delay: .9s;
+        }
+
+        &:nth-child(2n){
+            animation-delay: .3s;
+        }
+    }
+
+    @keyframes opacity {
+        from{
+            opacity: 1;
+        }
+
+        50%{
+            opacity: 1;
+        }
+
+        to{
+            opacity: 0;
+        }
+    }
+}
